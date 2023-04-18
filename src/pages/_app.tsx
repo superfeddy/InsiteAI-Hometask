@@ -1,5 +1,5 @@
 //  Internal Dependencies
-import Layout from "@/components/Layout/Layout";
+import Layout from "@components/Layout/Layout";
 
 //  Stylesheet
 import "../styles/globals.css";
