@@ -16,7 +16,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
       </Head>
       <>
         <Navbar />
-        <div>{children}</div>
+        <div className="mb-10">{children}</div>
       </>
     </>
   );

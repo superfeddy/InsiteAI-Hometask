@@ -19,7 +19,8 @@
       "@/*": ["src/*"],
       "@icons/*": ["public/icons/*"],
       "@common/*": ["src/common/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@helpers/*": ["src/helpers/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

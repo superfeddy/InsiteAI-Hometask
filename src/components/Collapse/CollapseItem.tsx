@@ -1,13 +1,15 @@
 //  External Depedencies
-import React, { useState } from "react";
+import React, { useState, FC, PropsWithChildren } from "react";
 
 //  Types & Interface
 interface ICollapseItem {
   title: string;
-  content: string[];
 }
 
-const CollapseItem = ({ title, content }: ICollapseItem) => {
+const CollapseItem: FC<ICollapseItem & PropsWithChildren> = ({
+  title,
+  children,
+}) => {
   const [isCollapseItemOpen, setCollapseItemOpen] = useState<boolean>(false);
 
   const toggleCollapseItemOpen = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -25,13 +27,7 @@ const CollapseItem = ({ title, content }: ICollapseItem) => {
       </div>
       <div className={`${isCollapseItemOpen ? "visible" : "hidden"} py-3`}>
         <hr className="border-2 border-black" />
-        <div className="pt-5">
-          {content.map((sentence: string, index: number) => (
-            <p className="pb-3" key={`${index}-${sentence}`}>
-              {sentence}
-            </p>
-          ))}
-        </div>
+        <div className="pt-5">{children}</div>
       </div>
     </div>
   );
